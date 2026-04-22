@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Add Transaction</title></head>
+<body>
+<h2>Add a New Transaction</h2>
+<form method="POST">
+    Product ID: <input type="text" name="product_id" required/><br/>
+    Quantity: <input type="number" name="quantity" min="1" value="1" required/><br/>
+    <input type="submit" value="Add Transaction"/>
+</form>
+<p><a href="{{ url_for('dashboard') }}">Back to Dashboard</a></p>
+</body>
+</html>

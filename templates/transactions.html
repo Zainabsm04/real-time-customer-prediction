@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Your Transactions</title></head>
+<body>
+<h2>Your Transactions</h2>
+<table border="1">
+    <tr>
+        <th>Product ID</th>
+        <th>Date</th>
+        <th>Quantity</th>
+    </tr>
+    {% for t in transactions %}
+    <tr>
+        <td>{{ t.product_id }}</td>
+        <td>{{ t.date.strftime('%Y-%m-%d %H:%M') }}</td>
+        <td>{{ t.quantity }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<p><a href="{{ url_for('dashboard') }}">Back to Dashboard</a></p>
+</body>
+</html>
